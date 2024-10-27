@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.app{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    font-family: "Roboto";
+}
+
+.app_display{
+    width: 500px;
+    height: 900px;
+    border-radius: 50px;
+    background-color: #212429e5;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+}
+
+.display_header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-around;
+    color: white;
+}
+
+.display_header_name{
+    align-self: center;
+    
+}
+
+.display_header_other{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.display_main{
+    width: 100%;
+    height: 80%;
+    border-radius: 15px 15px 0px 0px;
+    border-top: 3px solid red;
+    box-shadow: 0px -25px 100px  red;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+body{
+    margin: 0;
+}
+
+
+.greating{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation: greating 6s 1;
+}
+
+/*upper navigation*/
+
+.display_nav{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 11px;
+}
+
+.display_nav div{
+    text-align: center;
+    align-content: center;
+    width: 117px;
+    height: 50px;
+    background-color: #32363C;
+    border-radius: 10px;
+    color: white;
+}
+
+.display_wallet img{
+    width: 60px;
+}
+
+.display_wallet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#wallet_coin{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.display_progress{
+    color: white;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.level_bar{
+    width: 368px;
+    height: 9px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+.level_progress{
+    height: 100%;
+    width: 0%;
+    transition: all .2s ease;
+    background: linear-gradient(120deg, #ADFAA1, #C597CC,#2F39A3);
+}
+
+.display_tap{
+    margin: 0 auto;
+    width: 247px;
+    height: 247px;
+    border-radius: 50%;
+    border: 10px solid #5d2685;
+    background: radial-gradient(#b362cc, #4f10c4, #5d268a);
+    overflow: hidden;
+    text-align: center;
+    align-content: center;
+}
+
+.display_tap img{
+    width: 90%;
+    height: 90%;
+}
+
+.display_energy{
+    font-size: 11px;
+    color: white;
+    margin: 0 auto;
+}
+
+.display_energy img{
+    width: 10px;
+}
+
+.display_footer{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    color: white;
+    font-size: 11px;
+    align-items: center;
+    background: #32363C;
+    border-radius: 10px;
+    padding-top: 10px;
+    
+}
+
+.display_footer div{
+    height: 50px;
+}
+
+
+/*Modifiers*/
+
+
+.tap_mode{
+    transform: skew(1.5deg);
+}
+
+
+.money{
+    width: 50px;
+    animation: moneyTap 1s 1;
+    position: absolute;
+}
+
+
+
+@keyframes greating{
+  
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+@keyframes moneyTap{
+    0%{transform: translateY(0px); opacity: 1;}
+    100%{transform: translateY(-30px); opacity: 0;}
+}
