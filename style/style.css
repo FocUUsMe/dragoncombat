@@ -31,7 +31,6 @@
 
 .display_header_name{
     align-self: center;
-    
 }
 
 .display_header_other{
@@ -96,7 +95,7 @@ body{
     gap: 30px;
 }
 #wallet_coin{
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     color: #fff;
 }
@@ -121,7 +120,7 @@ body{
 .level_progress{
     height: 100%;
     width: 0%;
-    transition: all .2s ease;
+    transition: all .3s ease;
     background: linear-gradient(120deg, #ADFAA1, #C597CC,#2F39A3);
 }
 
@@ -185,6 +184,35 @@ body{
     position: absolute;
 }
 
+.display_content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/*mine page*/
+
+.mine_content{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mine_nav{
+    width: 70%;
+    height: 36px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    border-radius: 15px;
+    background-color: #32363C;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
 
 
 @keyframes greating{
@@ -204,4 +232,146 @@ body{
 @keyframes moneyTap{
     0%{transform: translateY(0px); opacity: 1;}
     100%{transform: translateY(-30px); opacity: 0;}
+}
+
+@media (max-width: 1024px){
+    .app_display{
+        width: 80vw;
+        height: 90vh;
+    }   
+
+    .display_header_other div{
+        font-size: 30px;
+    }
+
+    .display_header_other img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .display_header_name{
+        font-size: 30px;
+    }
+
+    .display_nav div{
+        width: 150px;
+        height: 70px;
+        font-size: 18px;
+    }
+
+    .display_tap{
+        width: 350px;
+        height: 350px;
+    }
+
+    .money{
+        width: 50px;
+    }
+
+    .display_wallet span{
+        font-size: 60px;
+    }
+
+    .display_wallet img{
+        width: 60px;
+    }
+
+    .display_progress{
+        font-size: 25px;
+    }
+
+    .level_bar{
+        height: 15px;
+        width: 60%;
+    }
+
+    .display_energy{
+        font-size: 25px;
+    }
+
+    .display_energy img{
+        width: 22px;
+    }
+
+    .display_footer div{
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .display_footer img{
+        width: 32px;
+    }
+}
+
+@media (max-width: 480px){
+    .app_display{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    .display_header_other div{
+        font-size: 15px;
+    }
+
+    .display_header_other img{
+        width: 18px;
+        height: 18px;
+    }
+
+    .display_header_name{
+        font-size: 20px;
+    }
+
+    .display_progress{
+        font-size: 15px;
+    }
+
+    .level_bar{
+        width: 300px;
+        height: 10px;
+    }
+
+    .display_nav div{
+        width: 96px;
+        font-size: 12px;
+    }
+
+    .display_tap{
+        width: 200px;
+        height: 200px;
+    }
+
+    .money{
+        width: 40px;
+    }
+
+    .display_wallet span{
+        font-size: 15px;
+    }
+
+    .display_wallet img{
+        width: 40px;
+    }
+
+    .display_energy{
+        font-size: 12px;
+    }
+
+    .display_energy img{
+        width: 10px;
+    }
+
+    .display_footer div{
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .display_footer img{
+        width: 20px;
+    }
+
+    
 }

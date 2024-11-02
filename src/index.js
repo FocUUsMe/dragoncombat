@@ -10,6 +10,16 @@ const lvlProg = document.querySelector('.level_progress');
 
 const level = document.querySelector('#level');
 
+const navMine = document.querySelector('.display_footer-mine');
+
+const navGame = document.querySelector('.display_footer-exchange');
+
+const displayContent = document.querySelector('.display_content');
+
+const mineContent  = document.querySelector('.mine_content');
+
+
+
 
 // DataBase
 const data = {
@@ -111,6 +121,19 @@ function upgradeLvl(){
       lvlProg.style.width =  data.level_progress + '%';
 }
 
+function changeToMenu(){
+   // changing scene to menu
+   mineContent.style.display = 'flex';
+   displayContent.style.display = 'none';
+   
+}
+
+function changeToGame(){
+   //changing scene to game
+   mineContent.style.display = 'none';
+   displayContent.style.display = 'flex';
+}
+
 
 // function calls
 
@@ -127,3 +150,5 @@ energyRecovery();
 //events
 
 dragon.addEventListener('click', handleTap);
+navMine.addEventListener('click', changeToMenu);
+navGame.addEventListener('click', changeToGame);
