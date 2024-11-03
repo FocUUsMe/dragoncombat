@@ -18,6 +18,12 @@ const displayContent = document.querySelector('.display_content');
 
 const mineContent  = document.querySelector('.mine_content');
 
+const luckyCoin = document.querySelector('#lucky_coin');
+
+const gemCoin = document.querySelector('#gem_coin');
+
+const boxCoin = document.querySelector('#box_coin');
+
 
 
 
@@ -28,7 +34,10 @@ const data = {
    profit:1,
    level:1, 
    level_progress:0,
-   earn_per_tap:1
+   earn_per_tap:1,
+   lucky_coin:560,
+   gem_coin:890,
+   box_coin:1340
 }
 
 

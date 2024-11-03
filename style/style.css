@@ -213,6 +213,54 @@ body{
     align-items: center;
 }
 
+/*Markets*/
+
+.markets_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    height: 350px;
+    margin: 20px 0px;
+}
+
+.market-case{
+    display: flex;
+    gap: 10px;
+}
+
+.market-case div{
+    width: 170px;
+    height: 107px;
+    border: 1px solid #fff;
+    text-align: center;
+    align-content: center;
+    border-radius: 18px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.market-case img{
+    width: 48px;
+    height: 48px;
+}
+
+.market-case_1{
+    display: flex;
+}
+
+.market-case_1 div{
+    width: 360px;
+    height: 107px;
+    border: 1px solid #fff;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 18px;
+    color: #fff;
+}
 
 
 @keyframes greating{
