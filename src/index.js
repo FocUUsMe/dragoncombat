@@ -24,6 +24,19 @@ const gemCoin = document.querySelector('#gem_coin');
 
 const boxCoin = document.querySelector('#box_coin');
 
+const buyBtns = document.querySelectorAll('.buy_card');
+
+const buyBlock = document.querySelector('.buy_block');
+
+const profitSpan = document.querySelector('.profit_span');
+
+const costSpan = document.querySelector('.cost_span');
+
+const srcSpan = document.querySelector('.src_span');
+
+const buyBtn = document.querySelector('.buy_btn');
+
+
 
 
 
@@ -100,7 +113,7 @@ function earnPerSec(){
    let profitInterval = setInterval(()=>{
       data.coin = data.coin + data.profit;
       currentWallet.innerHTML = data.coin;
-   }, 1000);
+   }, 60000);
 }
 
 function energyRecovery(){
@@ -142,6 +155,45 @@ function changeToGame(){
    mineContent.style.display = 'none';
    displayContent.style.display = 'flex';
 }
+
+buyBtns.forEach((value, index, array)=>{
+   value.addEventListener('click', function(){
+      let price = Number(value.dataset.price);
+      let upgrade = Number(value.dataset.upgrade);
+
+      let src = value.dataset.src;
+
+      buyBlock.style.animation = 'buyBlock 3s 1';
+
+      srcSpan.innerHTML = `<img src="${src}" alt="">`;
+      profitSpan.innerHTML = upgrade;
+      costSpan.innerHTML = price;
+
+      buyBtn.onclick = function(){
+         if(price <= data.coin){
+            data.coin = data.coin - price;
+            data.profit = data.profit + upgrade;
+            currentWallet.innerHTML = data.coin;
+            buyBlock.style.animation = 'buyBlockDisappear';
+            // buyBlock.classList.add('buy_block_disappear');
+
+            // buyBlock.classList.remove('buy_block_disappear');
+         }else{
+            alert('Вы не смогли совершить покупку');
+
+            // buyBlock.classList.add('buy_block_disappear');
+
+            // buyBlock.classList.remove('buy_block_disappear');
+            buyBlock.style.animation = 'buyBlockDisappear 3s 1';
+
+            setTimeout(()=>{
+               buyBlock.style.animation = 'none';
+            }, 3000);
+         }
+      }
+      
+   })});
+
 
 
 // function calls
