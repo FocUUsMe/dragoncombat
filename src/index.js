@@ -113,7 +113,7 @@ function earnPerSec(){
    let profitInterval = setInterval(()=>{
       data.coin = data.coin + data.profit;
       currentWallet.innerHTML = data.coin;
-   }, 60000);
+   }, 10000);
 }
 
 function energyRecovery(){
@@ -163,7 +163,7 @@ buyBtns.forEach((value, index, array)=>{
 
       let src = value.dataset.src;
 
-      buyBlock.style.animation = 'buyBlock 3s 1';
+      buyBlock.style.animation = 'buyBlock 3s 1 forwards';
 
       srcSpan.innerHTML = `<img src="${src}" alt="">`;
       profitSpan.innerHTML = upgrade;
@@ -174,17 +174,12 @@ buyBtns.forEach((value, index, array)=>{
             data.coin = data.coin - price;
             data.profit = data.profit + upgrade;
             currentWallet.innerHTML = data.coin;
-            buyBlock.style.animation = 'buyBlockDisappear';
-            // buyBlock.classList.add('buy_block_disappear');
 
-            // buyBlock.classList.remove('buy_block_disappear');
+            buyBlock.style.animation = 'buyBlockDisappear forwards';
          }else{
             alert('Вы не смогли совершить покупку');
 
-            // buyBlock.classList.add('buy_block_disappear');
-
-            // buyBlock.classList.remove('buy_block_disappear');
-            buyBlock.style.animation = 'buyBlockDisappear 3s 1';
+            buyBlock.style.animation = 'buyBlockDisappear 3s 1 forwards';
 
             setTimeout(()=>{
                buyBlock.style.animation = 'none';
